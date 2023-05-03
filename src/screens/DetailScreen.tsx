@@ -12,10 +12,7 @@ interface Props extends StackScreenProps<RootStackParams, 'DetailScreen'> { }
 const { height } = Dimensions.get('screen')
 
 const DetailScreen = ({ route, navigation }: Props) => {
-
-
   const movie = route.params as Movie;
-
   const uri = useMemo(() => `https://image.tmdb.org/t/p/w500/${movie.poster_path}`, [movie.poster_path])
   const { isLoading, cast, fullMovie } = useMovieDetails(movie.id)
 
@@ -45,7 +42,6 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: '100%',
     height: height * 0.7,
-
     shadowColor: "#000",
     shadowOffset: {
       width: 0,

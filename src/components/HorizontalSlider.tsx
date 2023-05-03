@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 10,
   }
-
 })
 
 export default HorizontalSlider

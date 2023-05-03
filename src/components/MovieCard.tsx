@@ -12,7 +12,6 @@ interface Props {
 const MovieCard = ({ movie, height = 400, width = 300 }: Props) => {
 
   const uri = useMemo(() => `https://image.tmdb.org/t/p/w500/${movie.poster_path}`, [movie.poster_path])
-
   const navigation = useNavigation<any>();
 
   return (
